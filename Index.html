@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="./css/Style.css" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 text/html"
+    />
+    <title>-- Title --</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png" />
+
+    <div class="BlockInLine">
+      <div class="TopLogo">
+        <h1 class="m-0 display-4 text-uppercase text-white">
+          COFFEE PARTY
+          <img src="./img/SmallLogo.png" alt="Logo" class="Logo" />
+        </h1>
+      </div>
+      <div class="Menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </head>
+  <body>
+    <section class="carousel" aria-label="Gallery">
+      <ol class="carousel__viewport">
+        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <img src="./img/carousel-1.jpg" alt="First product" />
+            <a href="#carousel__slide2" class="carousel__prev"
+              >Go to last slide</a
+            >
+            <a href="#carousel__slide2" class="carousel__next"
+              >Go to next slide</a
+            >
+          </div>
+        </li>
+        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+          <div class="carousel__snapper">
+            <img src="./img/carousel-2.jpg" alt="First product" />
+            <a href="#carousel__slide1" class="carousel__prev"
+              >Go to previous slide</a
+            >
+            <a href="#carousel__slide2" class="carousel__next"
+              >Go to next slide</a
+            >
+          </div>
+        </li>
+      </ol>
+      <aside class="carousel__navigation">
+        <ol class="carousel__navigation-list">
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide1" class="carousel__navigation-button"
+              >Go to slide 1</a
+            >
+          </li>
+          <li class="carousel__navigation-item">
+            <a href="#carousel__slide2" class="carousel__navigation-button"
+              >Go to slide 2</a
+            >
+          </li>
+        </ol>
+      </aside>
+    </section>
+  </body>
+  <footer>
+    <dive>
+      Powered by : Meysam Labafbashi
+      <a href="mailto: paramont@gmail.com">
+        <img src="./img/Email.png" alt="Contact me" class="Image" />
+      </a>
+    </dive>
+  </footer>
+</html>
