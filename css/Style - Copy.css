@@ -1,3 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: #2d1602;
+  color: rgb(255, 240, 215);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+Body {
+  min-height: 52rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #a3978d;
+}
+
+.BlockInLine {
+  display: inline;
+  width: 100%;
+}
+.TopLogo {
+  float: left;
+}
+
+.Menu {
+  float: right;
+}
+
+.Image {
+  width: 2%;
+  height: 2%;
+  background-color: rgb(255, 240, 215);
+}
+
+.Logo {
+  width: 10%;
+  height: 10%;
+}
+
 @keyframes tonext {
   75% {
     left: 0;
@@ -43,70 +135,6 @@
   }
 }
 
-body {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  margin-top: 75px;
-}
-
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-  background: #2d1602;
-  color: rgb(255, 240, 215);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.BlockInLine {
-  display: inline;
-  width: 100%;
-}
-
-.Image {
-  width: 4%;
-  height: 4%;
-  background-color: rgb(255, 240, 215);
-}
-
-.Logo {
-  width: 10%;
-  height: 10%;
-}
-
-.TopLogo {
-  float: left;
-}
-
-.Menu {
-  float: right;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-ol,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .carousel {
   position: relative;
   padding-top: 75%;
@@ -128,19 +156,21 @@ li {
 }
 
 .carousel__item {
-  width: inherit;
-  height: inherit;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: auto;
 }
 
 .carousel__slide {
   position: relative;
   flex: 0 0 100%;
+  width: 100%;
+  background-color: rgba(109, 109, 109, 0.01);
   counter-increment: item;
-  background-color: rgba(3, 0, 0, 0);
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: #99f;
+  background-color: rgba(109, 109, 109, 0.01);
 }
 
 .carousel__slide:before {
@@ -149,18 +179,20 @@ li {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
+  color: rgba(109, 109, 109, 0.01);
   font-size: 2em;
 }
 
 .carousel__snapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   scroll-snap-align: center;
-  background-size: cover;
+  max-width: 100%;
+  max-height: 80vh;
+  margin: auto;
 }
 
 @media (hover: hover) {
@@ -202,9 +234,9 @@ li {
 
 .carousel__navigation-button {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(145, 144, 142);
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -241,11 +273,11 @@ li {
 .carousel::after {
   content: "";
   z-index: 1;
-  background-color: #fffbfbc0;
+  background-color: rgb(51, 51, 51);
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   line-height: 4rem;
   text-align: center;
@@ -254,8 +286,10 @@ li {
 
 .carousel::before {
   background-image: url("../img/Previous.png");
+  background-color: rgb(187, 182, 178);
 }
 
 .carousel::after {
   background-image: url("../img/Next.png");
+  background-color: rgb(187, 182, 178);
 }
